@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="topnav">
+            <a class="active" href="#addEmployee">Add a New Employee</a>
+            <a href="#addVehicle">Add a new Vehicle</a>
+            <a href="#givefeedback">Give Feedback</a>
+            <a href="#pricing">Pricing</a>
+        </div>
+    </div>
+    <img src="parking-cover.jpg" class="cover-img" alt="parking">
+
+
+    <div class="nav-bar-item" id="addEmployee">
+        <h2>Add a New Employee: </h2>
+        <form >
+
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter first name"><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter last name"> <br>
+
+            <span>Gender</span>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email Id"><br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd"><br>
+            <label for="confirmpassword">Confirm Password:</label>
+            <input type="password" id="confirmpassword" name="confirmpassword"><br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile">
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
+
+
+    <div class="nav-bar-item" id="addVehicle">
+        <h2>Add a New Vehicle: </h2>
+        <form >
+
+            <label for="vehiclecompany">Vehicle Company:</label>
+            <input type="text" id="vehiclecompany" name="vehiclecompany" placeholder="Enter Vehicle Company"><br>
+            <label for="vehiclemodel">Vehicle Model:</label>
+            <input type="text" id="vehiclemodel" name="vehiclemodel" placeholder="Enter Vehicle Model"> <br>
+
+            <span>Type</span>
+            <input type="radio" id="fourwheeler" name="vehicletype" value="fourwheeler">
+            <label for="fourwheeler">Four Wheeler</label>
+            <input type="radio" id="twowheeler" name="vehicletype" value="twowheeler">
+            <label for="twowheeler">Two Wheeler</label>
+            <br>
+
+            <label for="vnumber">Vehicle Number:</label>
+            <input type="text" id="vnumber" name="vnumber" placeholder="Enter Vehicle number"><br>
+
+            <label for="employeeid">Employee Id:</label>
+            <input type="employeeid" id="employeeid" name="employeeid"><br>
+
+            <label for="identification">identification:</label>
+            <input type="text" id="identification" name="identification">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="nav-bar-item" id="givefeedback">
+        <h2>Give Feedback</h2>
+        <form action="">
+            <label for="fullname">Full name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter full name"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email Id"><br>
+            <label for="subject">Suject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter subject"><br>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="5" cols="18"></textarea>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+
+    <div class="nav-bar-item" id="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-container">
+            <h4>Cycle</h4>
+            <div class="rounded">
+                <h3 >$100 /month</h3>
+            </div>
+           
+            <p>$5 daily</p>
+            <p>$100 monthly</p>
+            <p>$500 yearly</p>
+            <button type="submit" class="purchase-btn">Purchase Now</button>
+        </div>
+
+        <div class="pricing-container">
+            <h4>Motorcycle</h4>
+            <div class="rounded">
+                <h3 >$200 /month</h3>
+            </div>
+           
+            <p>$100 daily</p>
+            <p>$200 monthly</p>
+            <p>$1000 yearly</p>
+            <button type="submit" class="purchase-btn">Purchase Now</button>
+        </div>
+
+        <div class="pricing-container">
+            <h4>Four Wheeler</h4>
+            <div class="rounded">
+                <h3 >$500 /month</h3>
+            </div>
+           
+            <p>$20 daily</p>
+            <p>$500 monthly</p>
+            <p>$3500 yearly</p>
+            <button type="submit" class="purchase-btn">Purchase Now</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
