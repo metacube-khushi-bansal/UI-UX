@@ -1,3 +1,285 @@
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: 333333;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("parking-cover.jpeg");
+
+  min-height: 540px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  /* position: relative; */
+}
+
+body {
+  margin: 0;
+}
+
+/* 
+  .container{
+    position: relative;
+  } */
+
+.topnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #004aad;
+  /* z-index: 1000; */
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: #0a74da;
+  color: black;
+}
+
+.cover-img {
+  width: 100%;
+  height: 80%;
+}
+
+.title {
+  font-size: 70px;
+  color: rgb(1, 112, 240);
+  text-align: justify
+}
+
+/*  */
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1rem;
+
+  color: #A77B0E;
+  background: #FAE042;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #040404;
+  
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.collapsible-content .content-inner {
+  background: rgba(250, 224, 66, .2);
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+  /* Added padding and max-width to prevent cut-off */
+  padding: 0 10px;
+}
+
+.toggle:checked+.lbl-toggle+.collapsible-content {
+  max-height: 1000px;
+  /* Increased to fit large forms */
+  padding: 10px;
+}
+
+.toggle:checked+.lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked+.lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.content-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Space between form fields */
+}
+
+.nav-bar-item {
+  border: 1px solid #e0e0e0;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.nav-bar-item-title {
+  border: 1px solid white;
+  text-align: center;
+  color: black;
+  background-color: #007acc;
+  border-radius: 10px;
+}
+
+.nav-bar-item-title:hover{
+  color: white;
+
+  background-color: #004aad;
+}
+form label {
+  display: block;
+  font-weight: bold;
+  color: #333333;
+}
+
+form input,
+form select,
+form textarea {
+  width: 60%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #007acc;
+
+}
+
+
+form div {
+  margin-top: 10px;
+}
+
+.form-submit-btn {
+  color: white;
+  background-color: #007acc;
+  width: 20%;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.form-submit-btn:hover {
+  color: #00A4FF;
+  background-color: #005f99;
+  border: 1px solid #00A4FF;
+
+}
+
+.feedback-form {
+  width: 100%;
+  text-align: end;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback-img {
+  width: 100%;
+  height: 75%;
+}
+
+
+.feedback-btn {
+  margin-right: 100px;
+}
+
+.pricing-container {
+  border: 2px solid #e0e0e0;
+  width: 33%;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+}
+
+.pricing-main-container {
+  display: flex;
+}
+
+.rounded {
+  border: 2px solid #007acc;
+  border-radius: 50px;
+  width: 90px;
+  height: 90px;
+  margin: auto;
+}
+
+.pricing {
+  color: grey;
+  height: 4px;
+
+}
+
+.purchase-btn {
+  background-color: #007acc;
+  color: white;
+  border: 1px solid rgb(1, 112, 240);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+}
+
+.purchase-btn:hover {
+  background-color: #005f99;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  
 .bg-img {
     /* The image used */
     background-image: url("parking-cover.jpeg");
