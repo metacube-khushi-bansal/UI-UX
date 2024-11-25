@@ -1,0 +1,532 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+.home-page {
+    background-image: url(./images/homebg.png);
+    /* Full height */
+    height: 700px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-bottom-right-radius: 25%;
+    border-bottom-left-radius: 25%; */
+
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-left {
+    margin-top: 25px;
+}
+
+.nav-middle {
+    margin-top: 25px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.nav-menu {
+    color: white;
+    padding-right: 25px;
+
+}
+
+.nav-middle a {
+    text-decoration: none;
+}
+
+.nav-right {
+    margin-top: 25px;
+}
+
+.nav-icon {
+    color: white;
+    padding-right: 25px;
+}
+
+.nav-icon:hover {
+    cursor: pointer;
+}
+
+.home-title {
+    color: white;
+    font-size: 40px;
+
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.download-btn {
+    color: white;
+    background-color: rgb(255, 94, 94);
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.download-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.features-btn {
+    color: white;
+    background-color: rgb(56, 56, 255);
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.features-btn:hover {
+    background-color: rgb(4, 4, 164);
+    cursor: pointer;
+}
+
+.home-mobile {
+    height: 70%;
+}
+
+.home-btn {
+    display: flex;
+}
+
+/* .features{
+    background-image: url(./images/bodybg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+} */
+
+.bodybg {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 730vh;
+}
+
+.top-heading {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.top-heading h3,
+h2 {
+    color: rgb(82, 122, 252);
+}
+
+.gray-content {
+    color: gray;
+}
+
+.features-card-content {
+    display: flex;
+}
+
+.features-card {
+    margin-left: 210px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.features-inner-content {
+    width: 54%;
+}
+
+.features-img-container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.features-weather-img {
+    width: 20%;
+    border-radius: 4px;
+}
+
+#img1 {
+    max-width: 11%;
+    max-height: 48%;
+    transform: skewY(3deg) rotateY(10deg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: -1;
+    position: absolute;
+    left: 240px;
+    margin-top: 50px;
+}
+
+#img2 {
+    max-width: 15%;
+    max-height: 60%;
+    transform: skewY(3deg) rotateY(10deg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    left: 340px;
+    z-index: -1;
+    margin-top: 25px;
+}
+
+#img3 {
+    max-width: 25%;
+    max-height: 50%;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+#img4 {
+    max-width: 15%;
+    max-height: 60%;
+    transform: skewY(-3deg) rotateY(10deg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    right: 340px;
+    margin-top: 25px;
+    /* z-index: -1; */
+}
+
+#img5 {
+    max-width: 11%;
+    max-height: 40%;
+    transform: skewY(-3deg) rotateY(10deg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    right: 240px;
+    z-index: -1;
+    margin-top: 50px;
+}
+
+.top-heading {
+    margin-top: 20px;
+}
+
+.cloud-main-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 135px;
+
+    /* margin: auto; */
+}
+
+.degree {
+    width: 64px;
+    height: 65px;
+    background-color: rgb(82, 122, 252);
+    color: white;
+    border-radius: 50px;
+    /* text-align: center; */
+    position: relative;
+    right: 550px;
+    bottom: -158px;
+}
+
+.sun {
+    width: 64px;
+    height: 65px;
+    background-color: rgb(245, 245, 116);
+    color: white;
+    border-radius: 50px;
+    /* text-align: center; */
+    position: relative;
+    right: 317px;
+    bottom: 170px;
+}
+
+.cloud-left {
+    display: flex;
+    justify-content: flex-start;
+    /* margin-left: auto; */
+    position: relative;
+    left: 165px;
+
+}
+
+.temp {
+    width: 70px;
+    height: 70px;
+    color: white;
+    background-color: rgb(82, 122, 252);
+    border-radius: 50px;
+    position: relative;
+    top: 275px;
+    left: 10px;
+}
+
+.temp-right {
+    width: 70px;
+    height: 70px;
+    color: white;
+    background-color: rgb(254, 49, 49);
+    border-radius: 50px;
+    position: relative;
+    top: 176px;
+
+    left: 436px;
+    z-index: 1
+}
+
+.temp-right p {
+    text-align: center;
+    padding-top: 24px;
+}
+
+.cloudy-circle {
+    width: 70px;
+    height: 70px;
+    color: white;
+    background-color: yellow;
+    border-radius: 50px;
+    position: relative;
+    top: 118px;
+    left: -37px;
+}
+
+.cloudy-circle-right {
+    width: 70px;
+    height: 70px;
+    color: white;
+    background-color: orange;
+    border-radius: 50px;
+    position: relative;
+    bottom: 198px;
+    left: 695px;
+    z-index: 1;
+}
+
+.cloudy-circle-right p {
+    text-align: center;
+    padding-top: 24px;
+}
+
+.cloudy-circle p {
+    margin-top: 24px;
+}
+
+.temp p {
+    padding-top: 12px;
+    text-align: center;
+}
+
+
+
+.cloud-mobile {
+    width: 220px;
+}
+
+.cloudy {
+    position: relative;
+    right: 312px;
+    top: 100px;
+    height: 220px;
+    font-size: 160px;
+    transform: rotate(90deg);
+    color: lightgray;
+    z-index: -1;
+
+}
+
+
+.sunny {
+    position: relative;
+    right: 212px;
+    top: 100px;
+    height: 220px;
+    font-size: 160px;
+    transform: rotate(90deg);
+    color: lightgray;
+    z-index: -1;
+}
+
+.rainy {
+    position: relative;
+    right: 239px;
+    top: 100px;
+    height: 220px;
+    font-size: 160px;
+    transform: rotate(90deg);
+    color: lightgray;
+    z-index: -1;
+
+}
+
+.cloud-right {
+    position: relative;
+    width: 29%;
+    margin-top: 127px;
+    right: 160px;
+    bottom: 80px;
+}
+
+#cloud-right {
+    position: relative;
+    width: 29%;
+    margin-top: 127px;
+    left: 150px;
+}
+
+#cloud-right-mobile {
+    display: flex;
+    justify-content: flex-start;
+    /* margin-left: auto; */
+    position: relative;
+    left: 276px;
+}
+
+.overlapping-circle {
+
+    display: flex;
+}
+
+.overlapping-circle div {
+    width: 30px;
+    height: 25px;
+    border: 1px dotted gray;
+    border-radius: 100px;
+    font-size: 7px;
+    color: gray;
+    text-align: center;
+    padding-top: 5px;
+    background-color: white;
+}
+
+.circle1 {
+    z-index: 1;
+}
+
+.circle2 {
+    position: relative;
+    right: 10px;
+}
+
+.circle3 {
+    z-index: -1;
+    position: relative;
+    right: 20px;
+}
+
+
+.review-container-main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.review-msg {
+    width: 246px;
+}
+
+.reviews-container1 {
+    padding-left: 60px;
+}
+
+.reviews-container2 {
+    padding-right: 60px;
+}
+
+
+.quote {
+    font-size: xxx-large;
+    color: rgb(82, 122, 252);
+}
+
+.reviewer {
+    position: relative;
+    display: inline;
+    bottom: 39px;
+    font-size: smaller;
+}
+
+.close-quote {
+    position: relative;
+    bottom: 25px;
+    left: 158px;
+}
+
+.reviews-container2 {}
+
+
+.download {
+    background-color: rgb(82, 122, 252);
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.download-left {
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.dowload-right {
+    margin: auto;
+}
+
+.download-links {
+    display: flex;
+}
+
+.download-content {
+    width: 322px;
+    text-align: justify;
+    margin-left: 95px;
+}
+
+.download-right {
+    margin-top: 150px;
+}
+
+.store-download {
+    margin-left: 95px;
+}
+
+.store-download-google {
+    margin-left: 10px;
+}
+
+
+
+.footer {
+    padding-right: 10px;
+    height: 200px;
+    background-color: rgb(42 55 112);
+}
+
+.footer-line {
+    margin-left: 150px;
+    width: 84%;
+    /* margin: 10px; */
+    height: 0%;
+    margin-top: 30px;
+    border: 1px solid rgb(132, 132, 132);
+}
+
+.footer-end {
+    margin-top: 50px;
+    text-align: center;
+    color: gray;
+}
