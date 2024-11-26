@@ -1,0 +1,25 @@
+.font-playfair{
+    font-family: 'Playfair Display';
+}
+
+.search-btn{
+    color:rgb(108, 117, 125);
+}
+
+.sign-up-btn{
+    background-color: white;
+    color:rgb(108, 117, 125) ;
+    border:1px solid rgb(108, 117, 125);
+    margin-left: 20px;
+
+}
+
+.header-logo{
+    font-size:32px;
+}
+
+
+.margin-custom{
+    margin-top: -20px;
+}
+
