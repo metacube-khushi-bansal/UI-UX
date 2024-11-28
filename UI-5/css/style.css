@@ -1,0 +1,17 @@
+/* Optional: Custom styles to adjust the sidebar height */
+body, html {
+    height: 100%;
+}
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.content {
+    width: calc(100%-300px);
+    margin-left: 250px; /* Sidebar width */
+    padding: 20px;
+}
