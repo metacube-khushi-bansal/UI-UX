@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="index.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topnav">
+            <a class="active" href="#addEmployee">Add a New Employee</a>
+            <a href="#addVehicle">Add a new Vehicle</a>
+            <a href="#givefeedback">Give Feedback</a>
+            <a href="#pricing">Pricing</a>
+        </div>
+    </div>
+
+    <img src="parking-cover.jpg" class="cover-img" alt="parking">
+
+
+    <div class="navbar">
+        <div class="nav-bar-item content-section" id="addEmployee">
+            <input id="employee-collapsible" class="toggle" type="checkbox" name="check" onclick="expandBtn(this)">
+            <label for="employee-collapsible" class="lbl-toggle nav-bar-item-title">Add Employee</label>
+            <form class="content collapsible-content">
+                <div class="content-inner">
+                    <div class="name_form">
+                        <label for="fname">Full name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Enter full name" required>
+                    </div>
+
+                    <div class="gender_form hidden">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="mail_form hidden">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email Id" required>
+                    </div>
+
+                    <div class="password_form hidden">
+                        <label for="pwd">Password:</label>
+                        <input type="password" id="pwd" name="pwd" placeholder="Enter Password" required>
+                    </div>
+
+                    <div class="confirm_password_form hidden">
+                        <label for="confirmpassword">Confirm Password:</label>
+                        <input type="password" id="confirmpassword" name="confirmpassword"
+                            placeholder="Confirm Password" required>
+                    </div>
+
+                    <div class="mobile_n hidden">
+                        <label for="mobile">Mobile Number:</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="Enter Mobile Number" required>
+                    </div>
+                    <input type="submit" value="Submit" class="form-submit-btn">
+
+                </div>
+            </form>
+        </div>
+
+
+        <div class="nav-bar-item content-section" id="addVehicle" class="content-section">
+            <input id="vehicle-collapsible" class="toggle" type="checkbox" name="check" onclick="expandBtn(this)">
+            <label for="vehicle-collapsible" class="lbl-toggle nav-bar-item-title">Add Vehicle</label>
+            <form class="content collapsible-content">
+                <div class="content-inner">
+                    <div class="vehicle_company">
+                        <label for="vehiclecompany">Vehicle Company:</label><input type="text" id="vehiclecompany"
+                            name="vehiclecompany" placeholder="Enter Vehicle Company">
+                    </div>
+                    <div class="vehicle_model hidden">
+                        <label for="vehiclemodel">Vehicle Model:</label>
+                        <input type="text" id="vehiclemodel" name="vehiclemodel" placeholder="Enter Vehicle Model">
+                    </div>
+                    <div class="vehicle_type hidden">
+                        <label for="vehicletype">Vehicle Type</label>
+                        <select id="vehicletype" name="vehicletype" required>
+                            <option value="">Select
+                                Vehicle</option>
+                            <option value="twowheeler">Two Wheeler</option>
+                            <option value="fourwheeler">Four Wheeler</option>
+                        </select>
+                    </div>
+                    <div  class="vehicle_number hidden"><label for="vnumber">Vehicle Number:</label> <input type="text" id="vnumber" name="vnumber"
+                            placeholder="Enter Vehicle Number">
+                    </div>
+                    <div class="emp_id hidden"> <label for="employeeid">Employee Id:</label> <input type="text" id="employeeid"
+                            name="employeeid" placeholder="Enter Employee Id">
+                    </div>
+                    <div class="vehicle_identification hidden"> <label for="identification">Identification:</label>
+                        <input type="text" id="identification" name="identification"
+                            placeholder="Enter Identification of Vehicle">
+                    </div>
+                    <input type="submit" value="Submit" class="form-submit-btn">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="nav-bar-item content-section" id="givefeedback">
+            <input id="feedback-collapsible" class="toggle" type="checkbox" name="check" onclick="expandBtn(this)">
+            <label for="feedback-collapsible" class="lbl-toggle nav-bar-item-title">Send Us A Message</label>
+
+            <div class="feedback-container content collapsible-content">
+                <div>
+                    <Img src="mail.webp" alt="mail-img" class="feedback-img"></Img>
+                </div>
+                <form class="feedback-form">
+                    <div>
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name">
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Email Id">
+                    </div>
+                    <div>
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                    </div>
+
+                    <div>
+                        <textarea name="message" id="message" rows="5" cols="18" placeholder="Message"></textarea>
+                    </div>
+                    <input type="submit" value="Submit" class="form-submit-btn feedback-btn">
+                </form>
+            </div>
+        </div>
+
+        <div class="nav-bar-item content-section" id="pricing">
+            <input id="pricing-collapsible" class="toggle" type="checkbox" name="check" onclick="expandBtn(this)">
+            <label for="pricing-collapsible" class="lbl-toggle nav-bar-item-title">Pricing</label>
+            <div class="pricing-main-container content collapsible-content">
+                <div class="pricing-container content-inner">
+                    <h4>Cycle</h4>
+                    <div class="rounded">
+                        <h3>$100 /month</h3>
+                    </div>
+                    <p class="pricing">$5 daily</p>
+                    <p class="pricing">$100 monthly</p>
+                    <p class="pricing">$500 yearly</p>
+                    <button type="submit" class="purchase-btn">Purchase Now</button>
+                </div>
+
+                <div class="pricing-container content-inner">
+                    <h4>Motorcycle</h4>
+                    <div class="rounded">
+                        <h3>$200 /month</h3>
+                    </div>
+                    <p class="pricing">$100 daily</p>
+                    <p class="pricing">$200 monthly</p>
+                    <p class="pricing">$1000 yearly</p>
+                    <button type="submit" class="purchase-btn">Purchase Now</button>
+                </div>
+
+                <div class="pricing-container content-inner">
+                    <h4>Four Wheeler</h4>
+                    <div class="rounded">
+                        <h3>$500 /month</h3>
+                    </div>
+                    <p class="pricing">$20 daily</p>
+                    <p class="pricing">$500 monthly</p>
+                    <p class="pricing">$3500 yearly</p>
+                    <button type="submit" class="purchase-btn">Purchase Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
