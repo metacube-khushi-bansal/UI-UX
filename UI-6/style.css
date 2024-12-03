@@ -279,3 +279,57 @@ form div {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
+
+
+.next-btn {
+  background-color: #007acc; 
+  color: black; 
+  font-size: 16px; 
+  padding: 10px 20px; 
+  margin-top:3px;
+  border: none;
+  border-radius: 8px; 
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease; 
+}
+
+.next-btn:hover {
+  background-color:#005f99;
+  color: white; 
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); 
+  transform: translateY(-2px); 
+}
+
+#password-strength-message{
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+#password-strength-message.weak{
+  color: red;
+}
+
+#password-strength-message.normal{
+  color: orange;
+}
+
+#password-strength-message.strong{
+  color: green;
+}
+
+
+
+input[type="password"] .weak{
+  border:4px solid red;
+}
+input[type="password"] .normal{
+  border:4px solid red;
+}
+input[type="password"] .strong{
+  border:4px solid red;
+}
+
+
+
