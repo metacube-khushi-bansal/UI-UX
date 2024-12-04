@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="index.js"></script>
+    <script src="vehiclescript.js"></script>
+    <script src="pricingscript.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topnav">
+            <a class="active" href="#addEmployee">Add a New Employee</a>
+            <a href="#addVehicle">Add a new Vehicle</a>
+            <a href="#givefeedback">Give Feedback</a>
+            <a href="#pricing">Pricing</a>
+        </div>
+    </div>
+
+    <img src="parking-cover.jpg" class="cover-img" alt="parking">
+
+
+    <div class="navbar">
+        <div class="nav-bar-item content-section" id="addEmployee">
+            <input id="employee-collapsible" class="toggle" type="checkbox" name="check" onclick="expandBtn(this)">
+            <label for="employee-collapsible" class="lbl-toggle nav-bar-item-title">Add Employee</label>
+            <form class="content collapsible-content">
+                <div class="form-container">
+                    <form id="employee-form">
+                        <div class="content-inner">
+                            <!-- Dynamic form content will be rendered here -->
+                        </div>
+                        <button type="button" class="form-submit-btn next-btn">Next</button>
+                    </form>
+                    <div id="password-strength-message" style="display: none; font-weight: bold;"></div>
+                </div>
+
+            </form>
+        </div>
+
+
+        <div class="nav-bar-item content-section" id="addVehicle" class="content-section">
+            <input id="vehicle-collapsible" class="toggle" type="checkbox" name="check" onclick="expandBtn(this)">
+            <label for="vehicle-collapsible" class="lbl-toggle nav-bar-item-title">Add Vehicle</label>
+            <form class="content collapsible-content">
+                <div class="vehicle-registration-form">
+                    <form id="vehicle-registration-form">
+                        <div class="vehicle-content-inner content-inner">
+                            <!-- Dynamic form content will be rendered here -->
+                        </div>
+                        <button type="button" class="vehicle-form-submit-btn form-submit-btn next-btn">Next</button>
+                    </form>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="nav-bar-item content-section" id="givefeedback">
+            <input id="feedback-collapsible" class="toggle" type="checkbox" name="check" onclick="expandBtn(this)">
+            <label for="feedback-collapsible" class="lbl-toggle nav-bar-item-title">Send Us A Message</label>
+
+            <div class="feedback-container content collapsible-content">
+                <div>
+                    <Img src="mail.webp" alt="mail-img" class="feedback-img"></Img>
+                </div>
+                <form class="feedback-form">
+                    <div>
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name">
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Email Id">
+                    </div>
+                    <div>
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                    </div>
+
+                    <div>
+                        <textarea name="message" id="message" rows="5" cols="18" placeholder="Message"></textarea>
+                    </div>
+                    <input type="submit" value="Submit" class="form-submit-btn feedback-btn">
+                </form>
+            </div>
+        </div>
+
+        <div class="nav-bar-item content-section" id="pricing">
+            <input id="pricing-collapsible" class="toggle" type="checkbox" name="check" onclick="expandBtn(this)">
+            <label for="pricing-collapsible" class="lbl-toggle nav-bar-item-title">Pricing</label>
+            <div class="pricing-main-container content collapsible-content">
+                <div class="pricing-container content-inner" id="cycle-pricing" style="display:none;">
+                    <h4>Cycle</h4>
+                    <div class="rounded">
+                        <h3 id="cycle-price-monthly"></h3>
+                    </div>
+                    <p class="pricing" id="cycle-daily-price"></p>
+                    <p class="pricing" id="cycle-monthly-price"></p>
+                    <p class="pricing" id="cycle-yearly-price"></p>
+                    <div id="cycle-plan-options"></div>
+                    <button type="button" class="purchase-btn" onclick="selectPlan('cycle')">Select Plan</button>
+                </div>
+
+                <div class="pricing-container content-inner" id="motorcycle-pricing" style="display:none;">
+                    <h4>Motorcycle</h4>
+                    <div class="rounded">
+                        <h3 id="motorcycle-price-monthly"></h3>
+                    </div>
+                    <p class="pricing" id="motorcycle-daily-price"></p>
+                    <p class="pricing" id="motorcycle-monthly-price"></p>
+                    <p class="pricing" id="motorcycle-yearly-price"></p>
+                    <div id="motorcycle-plan-options"></div>
+                    <button type="button" class="purchase-btn" onclick="selectPlan('motorcycle')">Select Plan</button>
+                </div>
+
+                <div class="pricing-container content-inner" id="four-wheeler-pricing" style="display:none;">
+                    <h4>Four Wheeler</h4>
+                    <div class="rounded">
+                        <h3 id="four-wheeler-price-monthly"></h3>
+                    </div>
+                    <p class="pricing" id="four-wheeler-daily-price"></p>
+                    <p class="pricing" id="four-wheeler-monthly-price"></p>
+                    <p class="pricing" id="four-wheeler-yearly-price"></p>
+                    <div id="four-wheeler-plan-options"></div>
+                    <button type="button" class="purchase-btn" onclick="selectPlan('four-wheeler')">Select Plan</button>
+                </div>
+
+
+                <div class="right-container">
+<div class="currency-selector">
+                    <label for="currency">Select Currency: </label>
+                    <select id="currency" onchange="changeCurrency()">
+                        <option value="INR">INR</option>
+                        <option value="USD">USD</option>
+                        <option value="YEN">YEN</option>
+                    </select>
+                </div>
+
+                <div class="selected-plan">
+                    
+                    
+                    <h4 id="plan-price"></h4>
+                    <button type="button" class="purchase-btn" onclick="getPass()">Get Pass</button>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+</body>
+
+</html>
