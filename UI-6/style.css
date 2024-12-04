@@ -92,7 +92,7 @@ input[type='checkbox'] {
 
 .lbl-toggle:hover {
   color: #040404;
-  
+
 }
 
 .lbl-toggle::before {
@@ -167,11 +167,12 @@ input[type='checkbox'] {
   border-radius: 10px;
 }
 
-.nav-bar-item-title:hover{
+.nav-bar-item-title:hover {
   color: white;
 
   background-color: #004aad;
 }
+
 form label {
   display: block;
   font-weight: bold;
@@ -283,53 +284,86 @@ form div {
 
 
 .next-btn {
-  background-color: #007acc; 
-  color: black; 
-  font-size: 16px; 
-  padding: 10px 20px; 
-  margin-top:3px;
+  background-color: #007acc;
+  color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 3px;
   border: none;
-  border-radius: 8px; 
+  border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-  transition: all 0.3s ease; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .next-btn:hover {
-  background-color:#005f99;
-  color: white; 
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); 
-  transform: translateY(-2px); 
+  background-color: #005f99;
+  color: white;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
-#password-strength-message{
+#password-strength-message {
   margin-top: 8px;
   font-size: 0.9rem;
 }
 
-#password-strength-message.weak{
+#password-strength-message.weak {
   color: red;
 }
 
-#password-strength-message.normal{
+#password-strength-message.normal {
   color: orange;
 }
 
-#password-strength-message.strong{
+#password-strength-message.strong {
   color: green;
 }
 
 
 
-input[type="password"] .weak{
-  border:4px solid red;
+input[type="password"] .weak {
+  border: 4px solid red;
 }
-input[type="password"] .normal{
-  border:4px solid red;
+
+input[type="password"] .normal {
+  border: 4px solid red;
 }
-input[type="password"] .strong{
-  border:4px solid red;
+
+input[type="password"] .strong {
+  border: 4px solid red;
 }
 
 
 
+.radio-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.radio-container input[type="radio"] {
+  margin-right: 10px;
+  accent-color: #007bff;
+  /* Customize radio button color */
+}
+
+.radio-label {
+  display: inline-block;
+  color: #333;
+}
+
+
+.right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected-plan {
+  margin-left: 15px;
+  margin-top:45px;
+
+}
