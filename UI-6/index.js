@@ -60,8 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var submitButton = document.querySelector(".form-submit-btn");
 
     function validatePasswordStrength(password) {
+        
         if (password.length < 8) return "Weak";
-        if (password.length < 12) return "Normal";
+        if (password.length < 12  ) return "Normal";
         return "Strong";
     }
 
@@ -95,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
             input.placeholder = step.placeholder || "";
             input.required = true;
         }
+
         var errorMessage = document.createElement("small");
         errorMessage.style.color = "red";
         errorMessage.style.display = "none";
@@ -105,15 +107,38 @@ document.addEventListener("DOMContentLoaded", function () {
         formContainer.appendChild(input);
         formContainer.appendChild(errorMessage);
         if (step.id === "pwd") {
-            formContainer.appendChild(passwordStrengthMessage);
-            input.addEventListener("input", function () {
-                var strength = validatePasswordStrength(input.value);
-                input.className = strength.toLowerCase();
-                passwordStrengthMessage.textContent = strength === "Weak" ? "Weak password!" : strength === "Normal" ? "Normal password! Try adding some numbers and special characters." : "Strong password!";
-                passwordStrengthMessage.style.display = "block";
+            input.addEventListener("input", () => {
+                const strength = validatePasswordStrength(input.value);
+                input.classList.remove("weak", "normal", "strong");
+                passwordStrengthMessage.classList.remove("weak", "normal", "strong");
+
+                switch (strength) {
+                    case "Weak":
+                        input.classList.add("weak");
+                        passwordStrengthMessage.classList.add("weak");
+                        passwordStrengthMessage.textContent = "Weak password!"
+                        passwordStrengthMessage.style.display = "block";
+                        break;
+                    case "Normal":
+                        input.classList.add("normal");
+                        passwordStrengthMessage.classList.add("normal");
+                        passwordStrengthMessage.textContent = "Normal password! Try adding some numbers and special characters"
+                        passwordStrengthMessage.style.display = "block";
+                        break;
+                    case "Strong":
+                        input.classList.add("strong");
+                        passwordStrengthMessage.classList.add("strong");
+                        passwordStrengthMessage.textContent = "Strong password!"
+                        passwordStrengthMessage.style.display = "block";
+                        break;
+                }
+
             });
+            passwordStrengthMessage.style.display = "none";
+
         }
     }
+
     submitButton.addEventListener("click", function (e) {
         e.preventDefault();
         var step = steps[currentStep];

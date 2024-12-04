@@ -345,7 +345,7 @@ input[type="password"] .strong {
 }
 
 .radio-container input[type="radio"] {
-  margin-right: 10px;
+  margin-right: 16px;
   accent-color: #007bff;
   /* Customize radio button color */
 }
@@ -353,17 +353,28 @@ input[type="password"] .strong {
 .radio-label {
   display: inline-block;
   color: #333;
+  margin-right: -9px;
+  margin-left: -80px;
 }
 
 
 .right-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 .selected-plan {
   margin-left: 15px;
-  margin-top:45px;
+  margin-top: -13px;
 
+
+}
+
+.radio-name{
+  margin-right:5px;
+}
+
+
+.currency-selector{
+  margin-top: 12px;
 }

@@ -43,17 +43,17 @@ function selectPlan(vehicleType) {
     var planOptions =
         '<form>' +
         '<label class="radio-container">' +
-        '<input type="radio" name="plan" value="daily"> ' +
+        '<input type="radio" name="plan" value="daily" class="radio-name"> ' +
         '<span class="radio-label">Daily: ₹' +
         vehicle.daily + '</span>' +
         '</label><br>' +
         '<label class="radio-container">' +
-        '<input type="radio" name="plan" value="monthly"> ' +
+        '<input type="radio" name="plan" value="monthly" class="radio-name"> ' +
         '<span class="radio-label">Monthly: ₹' + vehicle.monthly +
         '</span>' + '</label><br>' +
 
         '<label class="radio-container">' +
-        '<input type="radio" name="plan" value="yearly"> ' +
+        '<input type="radio" name="plan" value="yearly" class="radio-name"> ' +
         '<span class="radio-label">Yearly: ₹' +
         vehicle.yearly + '</span>' +
         '</label>' + '</form>';
@@ -70,7 +70,7 @@ function selectPlan(vehicleType) {
         });
     }
     // Update display with current plan selection 
-    document.getElementById("selected-plan").innerText = vehicleType.charAt(0).toUpperCase() + vehicleType.slice(1) + " - Select a Plan";
+    // document.getElementById("selected-plan").innerText = vehicleType.charAt(0).toUpperCase() + vehicleType.slice(1) + " - Select a Plan";
 }
 // Function to handle currency change and update prices
 function changeCurrency() {
