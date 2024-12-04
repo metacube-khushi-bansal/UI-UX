@@ -41,6 +41,83 @@ body {
 	overflow: scroll;
 }
 
+
+#dashboards:hover {
+	color: white;
+}
+
+#sidebarDashboards li:hover {
+	color: white;
+}
+
+#calender:hover {
+	color: white;
+}
+
+#chat:hover {
+	color: white;
+}
+
+#crm:hover {
+	color: white;
+}
+
+#crm-dropdown li:hover {
+	color: white;
+}
+
+#ecommerce:hover {
+	color: white;
+}
+
+#sidebarEcommerce li:hover {
+	color: white;
+}
+
+#email:hover {
+	color: white;
+}
+
+#sidebarEmail li:hover {
+	color: white;
+}
+
+#projects:hover {
+	color: white;
+}
+
+#sidebarProjects li:hover {
+	color: white;
+}
+
+#socialfeed:hover {
+	color: white;
+}
+
+#tasks:hover {
+	color: white;
+}
+
+#sidebarTasks li:hover {
+	color: white;
+}
+
+#filemanager:hover {
+	color: white;
+}
+
+#pages:hover {
+	color: white;
+}
+
+#sidebarPages li:hover {
+	color: white;
+}
+
+#widgets:hover {
+	color: white;
+}
+
 /* Side Nav */
 #sideBar {
 	position: sticky;
@@ -62,9 +139,10 @@ body {
 	overflow-y: scroll;
 }
 
-#content i{
+#content i {
 	cursor: pointer;
 }
+
 /* Content > Header */
 header {
 	background-color: var(--nav-background-light);
@@ -105,9 +183,13 @@ header {
 	border-bottom-left-radius: 0;
 }
 
+.side-nav-item a:hover {
+	color: white;
+}
+
 
 .flag_images {
-	width: 2rem;
+	width: 1rem;
 }
 
 
@@ -165,7 +247,7 @@ footer>ul {
 	gap: 1rem;
 }
 
-.footer-links a{
+.footer-links a {
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.4) !important;
 }
