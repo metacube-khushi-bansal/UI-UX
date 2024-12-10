@@ -1,0 +1,52 @@
+.add-task-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-task-button:hover {
+    background-color: #27ae60;
+  }
+  
+  .new-task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .new-task-form input,
+  .new-task-form textarea,
+  .new-task-form select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-buttons button {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .form-buttons button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .form-buttons button[type="button"] {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
