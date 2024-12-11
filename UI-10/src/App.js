@@ -9,7 +9,7 @@ const App = () => {
   
   return (
     <div className=''>
-      <h3 className='text-primary'>My Task Tracker</h3>
+      {/* <h3 className='text-primary'>My Task Tracker</h3> */}
       <TaskBoard/>
     </div>
   );

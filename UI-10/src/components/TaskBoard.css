@@ -1,18 +1,33 @@
+.taskboard-heading {
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid black;
+    box-shadow: 2px 5px 5px rgb(193, 190, 176);
+}
+
 .taskboard-container {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-  }
-  
-  .task-column {
+}
+
+.task-tracker {
+    margin-left: 25px;
+}
+
+.task-column {
     width: 30%;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
-  }
-  
-  .task-column h3 {
+}
+
+.task-column h3 {
     text-align: center;
-  }
-  
+}
+
+.add-task-btn {
+    margin: 15px;
+    margin-right: 42px;
+}
