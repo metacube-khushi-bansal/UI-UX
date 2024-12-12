@@ -6,7 +6,7 @@
 }
 
 .high-priority {
-  background-color: #e74c3c;
+  background-color: #f75240;
 }
 
 .medium-priority {
@@ -23,9 +23,6 @@
   justify-content: space-between;
 }
 
-.icon-container{
-
-}
 
 .edit-btn{
   background: none;
@@ -46,4 +43,11 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+.grabbable {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 }
